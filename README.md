@@ -37,3 +37,14 @@ Python 3.10 이상을 권장합니다. 외부 API 키나 실서비스 계정이 
 - [전체 인턴 및 프로젝트 목록](https://github.com/Luriar/dinostudio-internship-portfolio)
 
 **주의:** 이 공개 코드는 기존 회사 프로젝트를 이전하거나 일부 수정하여 공개한 것이 아닙니다. 실제 업무 수행 내용은 설명하되 고객 데이터나 정량 성과를 공개하지 않습니다.
+
+## 실행 가능한 확장 데모 (2026)
+
+기존 개념 예제 `demo.py`와 별개로 `workflow.py`에 **SQLite 기반 영속 Outbox, 동의 검사, 중복 계획 방지, 재시도 상태 기계, 감사 로그**를 구현했습니다. 실제 메시지는 전송하지 않고 가상 Fake Transport만 사용합니다.
+
+```bash
+python workflow.py
+python -m unittest discover -s tests -v
+```
+
+자세한 구조는 [워크플로 도식](docs/WORKFLOW.md)을 참고하세요. 이 데모의 기술 범위는 2024년 원본 프로그램의 구현 내용을 그대로 나타내지 않습니다.
